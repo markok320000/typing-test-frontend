@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Typing Test",
+  "description": "A typing speed test application that generates dynamic text prompts using the Gemini API. Test your typing speed, accuracy, and see your words per minute (WPM) and characters per minute (CPM) in real-time.",
+  "requestFramePermissions": []
+}
