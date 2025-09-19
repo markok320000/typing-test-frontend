@@ -19,7 +19,7 @@ export function getOrCreateUserId(storageKey = 'typing_test_user_id'): string {
     try {
         let id = window.localStorage.getItem(storageKey);
         if (!id) {
-            // Prefer crypto.randomUUID if available
+            // Prefer crypto.randomUUID
             if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
                 id = crypto.randomUUID();
             } else {
