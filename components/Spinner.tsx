@@ -8,7 +8,7 @@ const Spinner: React.FC = () => {
         className="w-12 h-12 rounded-full animate-spin
                     border-4 border-solid border-cyan-400 border-t-transparent"
         ></div>
-        <p className="text-slate-400">Generating new prompt...</p>
+        <p className="text-slate-400">Generating new prompt...,,</p>
     </div>
   );
 };
