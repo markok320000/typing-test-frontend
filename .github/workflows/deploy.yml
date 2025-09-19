@@ -46,4 +46,16 @@ jobs:
           push: true
           tags: |
             markok32000/typing-test-frontend:latest
-            markok32000/typing-test-frontend:${{ github.sha }}
+            markok32000/typing-test-frontend:${{ github.sha }} 
+
+      # Send Telegram message
+      - name: Send Telegram notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            🚀 Frontend build & Docker push completed for repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
+            Actor: ${{ github.actor }}
